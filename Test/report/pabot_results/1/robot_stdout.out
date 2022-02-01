@@ -1,0 +1,14 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.MySecondTest :: Fill Form https://www.tutorialspoint.com/selenium/se...
+==============================================================================
+My Iframe Test Case                                                   | PASS |
+------------------------------------------------------------------------------
+Suites.MySecondTest :: Fill Form https://www.tutorialspoint.com/se... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\91836\PycharmProjects\PlaywrightProject\Test\report\pabot_results\1\output.xml

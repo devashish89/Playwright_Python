@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.8 on win32)" generated="20220121 18:49:33.673" rpa="false" schemaversion="2">
+<suite id="s1" name="FirstTest" source="C:\Users\91836\PycharmProjects\PlaywrightProject\Test\FirstTest.robot">
+<kw name="Launch Browser Choice" library="CommonHelper" type="SETUP">
+<kw name="Launch Browser" library="PlaywrightCore">
+<msg timestamp="20220121 18:49:36.551" level="INFO">Opening Browser: chromium</msg>
+<status status="PASS" starttime="20220121 18:49:33.892" endtime="20220121 18:49:36.551"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:33.891" endtime="20220121 18:49:36.552"/>
+</kw>
+<test id="s1-t1" name="My Eleventh Test Case">
+<kw name="Open Selenium Easy Application" library="CommonHelper" type="SETUP">
+<kw name="Open Application" library="PlaywrightCore">
+<msg timestamp="20220121 18:49:43.856" level="INFO">Opening website .........</msg>
+<status status="PASS" starttime="20220121 18:49:36.555" endtime="20220121 18:49:43.857"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:36.554" endtime="20220121 18:49:43.857"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>http://demo.seleniumeasy.com/</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220121 18:49:43.858" level="INFO">http://demo.seleniumeasy.com/</msg>
+<status status="PASS" starttime="20220121 18:49:43.858" endtime="20220121 18:49:43.858"/>
+</kw>
+<kw name="Menu.Navigate Menu to Alerts" library="PageHelper">
+<arg>Window Popup Modal</arg>
+<kw name="Get Page Handle" library="CommonHelper">
+<var>${page}</var>
+<kw name="Get Page Object" library="PlaywrightCore">
+<var>${page_handle}</var>
+<msg timestamp="20220121 18:49:43.868" level="INFO">${page_handle} = &lt;Page url='http://demo.seleniumeasy.com/'&gt;</msg>
+<status status="PASS" starttime="20220121 18:49:43.867" endtime="20220121 18:49:43.868"/>
+</kw>
+<msg timestamp="20220121 18:49:43.869" level="INFO">${page} = &lt;Page url='http://demo.seleniumeasy.com/'&gt;</msg>
+<status status="PASS" starttime="20220121 18:49:43.867" endtime="20220121 18:49:43.869"/>
+</kw>
+<kw name="Navigate Menu Item" library="Menu">
+<arg>${page}</arg>
+<arg>Alerts &amp; Modals</arg>
+<arg>${second_menu_item}</arg>
+<status status="PASS" starttime="20220121 18:49:43.869" endtime="20220121 18:49:46.010"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:43.866" endtime="20220121 18:49:46.010"/>
+</kw>
+<kw name="PagePopUp.handle_pop_up_main_page_tasks" library="PageHelper">
+<kw name="Get Page Handle" library="CommonHelper">
+<var>${page}</var>
+<kw name="Get Page Object" library="PlaywrightCore">
+<var>${page_handle}</var>
+<msg timestamp="20220121 18:49:46.012" level="INFO">${page_handle} = &lt;Page url='http://demo.seleniumeasy.com/window-popup-modal-demo.html'&gt;</msg>
+<status status="PASS" starttime="20220121 18:49:46.012" endtime="20220121 18:49:46.012"/>
+</kw>
+<msg timestamp="20220121 18:49:46.013" level="INFO">${page} = &lt;Page url='http://demo.seleniumeasy.com/window-popup-modal-demo.html'&gt;</msg>
+<status status="PASS" starttime="20220121 18:49:46.011" endtime="20220121 18:49:46.013"/>
+</kw>
+<kw name="Work Within Popup Main Page Also" library="PagePopUp">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 18:49:46.013" endtime="20220121 18:49:50.851"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:46.011" endtime="20220121 18:49:50.852"/>
+</kw>
+<kw name="Close Selenium Easy Application" library="CommonHelper" type="TEARDOWN">
+<kw name="Close Application" library="PlaywrightCore">
+<status status="PASS" starttime="20220121 18:49:50.854" endtime="20220121 18:49:50.891"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:50.853" endtime="20220121 18:49:50.891"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:36.552" endtime="20220121 18:49:50.892"/>
+</test>
+<kw name="Quit Opened Browser" library="CommonHelper" type="TEARDOWN">
+<kw name="Close Browser" library="PlaywrightCore">
+<status status="PASS" starttime="20220121 18:49:50.899" endtime="20220121 18:49:51.300"/>
+</kw>
+<status status="PASS" starttime="20220121 18:49:50.898" endtime="20220121 18:49:51.300"/>
+</kw>
+<doc>My first tests file</doc>
+<status status="PASS" starttime="20220121 18:49:33.675" endtime="20220121 18:49:51.300"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FirstTest">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

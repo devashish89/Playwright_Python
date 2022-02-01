@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.8 on win32)" generated="20220121 17:32:40.661" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="MySecondTest" source="C:\Users\91836\PycharmProjects\PlaywrightProject\Test\MySecondTest.robot">
+<kw name="Launch Browser Choice" library="CommonHelper" type="SETUP">
+<arg>chromium</arg>
+<arg>True</arg>
+<kw name="Launch Browser" library="PlaywrightCore">
+<arg>${browser_name}</arg>
+<arg>${record_video}</arg>
+<msg timestamp="20220121 17:32:42.715" level="INFO">Opening Browser: chromium</msg>
+<status status="PASS" starttime="20220121 17:32:40.887" endtime="20220121 17:32:42.715"/>
+</kw>
+<status status="PASS" starttime="20220121 17:32:40.886" endtime="20220121 17:32:42.716"/>
+</kw>
+<test id="s1-s1-t1" name="My Iframe Test Case">
+<kw name="Open Website Herokuapp" library="CommonHelper" type="SETUP">
+<kw name="Open Application Herokuapp" library="PlaywrightCore">
+<msg timestamp="20220121 17:32:53.055" level="INFO">Opening https://the-internet.herokuapp.com/</msg>
+<status status="PASS" starttime="20220121 17:32:42.718" endtime="20220121 17:32:53.055"/>
+</kw>
+<status status="PASS" starttime="20220121 17:32:42.717" endtime="20220121 17:32:53.056"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Iframe Test Case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220121 17:32:53.058" level="INFO">Iframe Test Case</msg>
+<status status="PASS" starttime="20220121 17:32:53.057" endtime="20220121 17:32:53.058"/>
+</kw>
+<kw name="IframeHandling.Enter Text In TextArea" library="PageHelper">
+<kw name="Get Herokuapp Page Handle" library="CommonHelper">
+<var>${page}</var>
+<kw name="Get Herokuapp Page" library="PlaywrightCore">
+<var>${page_handle}</var>
+<msg timestamp="20220121 17:32:53.062" level="INFO">${page_handle} = &lt;Page url='https://the-internet.herokuapp.com/'&gt;</msg>
+<status status="PASS" starttime="20220121 17:32:53.061" endtime="20220121 17:32:53.062"/>
+</kw>
+<msg timestamp="20220121 17:32:53.063" level="INFO">${page} = &lt;Page url='https://the-internet.herokuapp.com/'&gt;</msg>
+<status status="PASS" starttime="20220121 17:32:53.060" endtime="20220121 17:32:53.063"/>
+</kw>
+<kw name="Navigate To Iframe Menu" library="IframeHandling">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 17:32:53.063" endtime="20220121 17:32:56.211"/>
+</kw>
+<kw name="Select All" library="IframeHandling">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 17:32:56.212" endtime="20220121 17:32:58.536"/>
+</kw>
+<kw name="Cut Text" library="IframeHandling">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 17:32:58.537" endtime="20220121 17:33:00.768"/>
+</kw>
+<kw name="Enter Text Iframe" library="IframeHandling">
+<arg>${page}</arg>
+<arg>I'm using Playwright here</arg>
+<status status="PASS" starttime="20220121 17:33:00.769" endtime="20220121 17:33:02.871"/>
+</kw>
+<kw name="Select All" library="IframeHandling">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 17:33:02.871" endtime="20220121 17:33:04.991"/>
+</kw>
+<kw name="Bold Text" library="IframeHandling">
+<arg>${page}</arg>
+<status status="PASS" starttime="20220121 17:33:04.992" endtime="20220121 17:33:06.072"/>
+</kw>
+<status status="PASS" starttime="20220121 17:32:53.059" endtime="20220121 17:33:06.072"/>
+</kw>
+<kw name="Close Website Herokuapp" library="CommonHelper" type="TEARDOWN">
+<kw name="Close Application Herokuapp" library="PlaywrightCore">
+<status status="PASS" starttime="20220121 17:33:06.073" endtime="20220121 17:33:06.082"/>
+</kw>
+<status status="PASS" starttime="20220121 17:33:06.072" endtime="20220121 17:33:06.083"/>
+</kw>
+<status status="PASS" starttime="20220121 17:32:42.716" endtime="20220121 17:33:06.083"/>
+</test>
+<kw name="Quit Opened Browser" library="CommonHelper" type="TEARDOWN">
+<kw name="Close Browser" library="PlaywrightCore">
+<status status="PASS" starttime="20220121 17:33:06.087" endtime="20220121 17:33:06.288"/>
+</kw>
+<status status="PASS" starttime="20220121 17:33:06.086" endtime="20220121 17:33:06.288"/>
+</kw>
+<doc>Fill Form https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm</doc>
+<status status="PASS" starttime="20220121 17:32:40.687" endtime="20220121 17:33:06.288"/>
+</suite>
+<status status="PASS" starttime="20220121 17:32:40.669" endtime="20220121 17:33:06.289"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="MySecondTest">Suites.MySecondTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
